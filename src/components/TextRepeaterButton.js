@@ -11,9 +11,16 @@ function TextRepeaterButton() {
     textArray.push(<span key={i}>I like this text</span>)
   }
 
+  const handleClick = () => {
+    setRepetitions(repetitions + 1);
+  }
+
   return (
-    <button className="TextRepeaterButton">
-      I like this text
+    <button
+    onClick={ handleClick }
+    className="TextRepeaterButton">
+
+      { textArray }
     </button>
   );
 }
